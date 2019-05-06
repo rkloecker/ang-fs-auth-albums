@@ -1,0 +1,27 @@
+<!-- <div>
+    <h3> {{ album.title }} - {{ album.artist }}  </h3>
+    <span *ngIf="auth.user | async as user" class="button is-small is-danger" (click)='deleteRecord(album, user)'>Delete</span>
+    <span *ngIf="auth.user | async as user" class="button is-small is-info" (click)='editRecord(album, user)'>Edit</span>
+   <hr>
+</div> -->
+
+<div class="list mb-2">
+  <p class="list-item">Title: {{ album.title }}</p>
+  <p class="list-item">Artist: {{ album.artist }}</p>
+  <p class="list-item">Rating: {{ album.rating }}</p>
+  <p class="list-item">
+    <span
+      *ngIf="auth.user | async as user"
+      class="button is-small is-danger mr-2"
+      (click)="deleteRecord(album, user)"
+      >Delete</span
+    >
+
+    <span
+      *ngIf="auth.user | async as user"
+      class="button is-small is-info"
+      (click)="editRecord(album, user)"
+      >Edit</span
+    >
+  </p>
+</div>

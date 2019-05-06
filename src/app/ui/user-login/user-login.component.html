@@ -1,0 +1,46 @@
+<div *ngIf="!(auth.user | async); else alreadyLoggedIn">
+  <form [formGroup]="userForm" (ngSubmit)="login()">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      name="email2"
+      class="input"
+      formControlName="email"
+      required
+      autocomplete="new-password"
+    />
+
+    <div *ngIf="formErrors.email" class="help is-danger">
+      {{ formErrors.email }}
+    </div>
+
+    <label for="password">Password</label>
+    <input
+      type="password"
+      id="password"
+      name="password2"
+      class="input"
+      formControlName="password"
+      required
+      autocomplete="new-password"
+    />
+
+    <div *ngIf="formErrors.password" class="help is-danger">
+      {{ formErrors.password }}
+    </div>
+
+    <button type="submit" class="button" [disabled]="!userForm.valid">
+      Submit
+    </button>
+
+    <span *ngIf="userForm.valid" class="help is-success">Form Looks Valid</span>
+  </form>
+</div>
+
+<ng-template #alreadyLoggedIn>
+  <p class="text-success">
+    You are logged in <i class="fa fa-thumbs-up"></i>
+    <a routerLink="/notes">Go to Firestore</a>
+  </p>
+</ng-template>

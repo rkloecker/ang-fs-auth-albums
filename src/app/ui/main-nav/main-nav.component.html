@@ -1,0 +1,42 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a
+      id="navToggle"
+      role="button"
+      class="navbar-burger"
+      (click)="toggleCollapse()"
+      [ngClass]="{ 'is-active': show }"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div
+    class="navbar-item has-text-weight-bold"
+    *ngIf="auth.user | async as user"
+  >
+    Hi, {{ user.displayName }}, UID: {{ user.uid }}
+  </div>
+
+  <div class="navbar-menu" [ngClass]="{ 'is-active': show }">
+    <div class="navbar-end">
+      <a
+        *ngIf="auth.user | async; else login"
+        class="navbar-item"
+        (click)="logout()"
+      >
+        Logout
+      </a>
+      <ng-template #login>
+        <a class="navbar-item" routerLink="/login">Login</a>
+        <a class="navbar-item" routerLink="/register">Register</a>
+      </ng-template>
+
+      <a *ngIf="auth.user | async" class="navbar-item" routerLink="/records">
+        Records
+      </a>
+    </div>
+  </div>
+</nav>
