@@ -2,7 +2,7 @@
 
 ## Uses Angular7, Firestore, Bulma CSS, authentication with email/password
 
-### [Live Demo](https://rkloecker.github.io/ang-fs-auth-albums)
+### [Live Demo](http://ang-fs-auth-albums.surge.sh/)
 
 ### authentication (auth.guards, service, notification, login, register user) according to codediodeio/angular-firestarter https://github.com/codediodeio/angular-firestarter
 

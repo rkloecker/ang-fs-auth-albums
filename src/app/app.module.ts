@@ -23,12 +23,13 @@ import { AngularFireFunctionsModule } from "@angular/fire/functions";
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    BrowserModule.withServerTransition({ appId: "serverApp" }),
+    // BrowserModule.withServerTransition({ appId: "serverApp" }),
+    BrowserModule,
     AppRoutingModule,
     CoreModule,
     UiModule,
     RecordsModule,
-    AngularFireModule.initializeApp(environment.firebase, "firestarter"),
+    AngularFireModule.initializeApp(environment.firebase, "ang-fs-auth-albums"),
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
