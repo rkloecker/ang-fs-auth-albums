@@ -2,11 +2,15 @@
 
 ## Uses Angular7, Firestore, Bulma CSS, authentication with email/password
 
-### [Live Demo](http://ang-fs-auth-albums.surge.sh/)
+### [Live Demo with surge](http://ang-fs-auth-albums.surge.sh/)
+
+### [Live Demo with gh-pages](https://rkloecker.github.io/ang-fs-auth-albums/)
 
 ### authentication (auth.guards, service, notification, login, register user) according to codediodeio/angular-firestarter https://github.com/codediodeio/angular-firestarter
 
 ### how to deploy with gh-pages: https://alligator.io/angular/deploying-angular-app-github-pages/
+
+## Important: When using angular-router with gh-pages make sure to change the 'base href' in the index.html file in the dist folder to <base href="/name_of_repo/">
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.1.
 
