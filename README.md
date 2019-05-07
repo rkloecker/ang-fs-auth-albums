@@ -16,7 +16,7 @@ ngh --dir=dist/reponame       // you could use npx ngh ...
 
 ## Important:
 When using angular-router with gh-pages make sure to change the 'base href' in the index.html file in the dist folder
-<base href="https://rkloecker.github.io/reponame/">
+base href="https://rkloecker.github.io/reponame/"
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.1.
