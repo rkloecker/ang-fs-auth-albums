@@ -11,17 +11,17 @@
 ### Deployment using gh-pages and angular-cli-ghpages
 *either globally install angular-cli-ghpages or use npx*
 
-**npm i -g angular-cli-ghpages
+**npm i -g angular-cli-ghpages**
 
-**ng build --prod --base-href https://<username>.github.io/<reponame>/
+**ng build --prod --base-href https://<username>.github.io/<reponame>/**
   
 *when using angular router make sure to change the 'base href' in the index.html file in the dist folder*
 
-**base href="/reponame/"
+**base href="/reponame/"**
   
 *With Angular CLI 6 the build artifacts are located in a dist subfolder specified under "outputPath" in the angular.json file*
 
-**ngh --dir=dist/name-of-subfolder
+**ngh --dir=dist/name-of-subfolder**
 
 
 
