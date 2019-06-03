@@ -13,7 +13,7 @@
 
 **npm i -g angular-cli-ghpages**
 
-**ng build --prod --base-href https://username.github.io/reponame/**
+**ng build --prod --base-href `https://username.github.io/reponame/`**
   
 *when using angular router make sure to change the 'base href' in the index.html file in the dist folder*
 
