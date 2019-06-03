@@ -9,14 +9,16 @@
 ### authentication (auth.guards, service, notification, login, register user) according to codediodeio/angular-firestarter https://github.com/codediodeio/angular-firestarter
 
 ### Deployment using gh-pages and angular-cli-ghpages
-npm i -g angular-cli-ghpages   // you could use npx
+1) either globally install angular-cli-ghpages or use npx
+npm i -g angular-cli-ghpages
 
-ng build --prod --base-href https://<username>.github.io/<reponame>/
-ngh --dir=dist/reponame       // you could use npx ngh ...
+2) ng build --prod --base-href https://<username>.github.io/<reponame>/
+2b) when using angular router make sure to change the 'base href' in the index.html file in the dist folder
+base href="/reponame/"
+  
+3) With Angular CLI 6 the build artifacts are located in a dist subfolder specified under "outputPath" in the angular.json file
+ngh --dir=dist/name-of-subfolder
 
-## Important:
-When using angular-router with gh-pages make sure to change the 'base href' in the index.html file in the dist folder
-### base href="/reponame/"
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.1.
